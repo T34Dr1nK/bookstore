@@ -20,13 +20,6 @@ app.use((req, res, next) => {
     next();
  })
 
-//dbconnection
-const connection = require("./dbconn.js");
-connection.connect(function(err) {
-    if (err) throw err;
-    console.log(`Connected to mySQL`);
-})
-
 //---------start router section -----------
 const routes = require("./router/routes.js");
 //---------End router section -------------
