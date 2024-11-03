@@ -22,9 +22,11 @@ app.use((req, res, next) => {
 
 //---------start router section -----------
 const routes = require("./router/routes.js");
+const RLroutes = require("./router/LoginRegisRouter");
 //---------End router section -------------
 
 app.use("/", routes);
+app.use("/User", RLroutes);
 
 //for routering err
 app.use(function (req, res) {
