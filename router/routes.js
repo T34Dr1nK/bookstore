@@ -1,8 +1,9 @@
 const express = require('express');
-const { testSys, ReadSql } = require("../controller/control.js");
+const { testSys, ReadSql, insertNewBook } = require("../controller/control.js");
 const route = express.Router();
 
 route.get('/', testSys);
-route.get('/ReadBook', ReadSql);
+route.get('/ReadSQL', ReadSql);
+route.post('/NewBook', insertNewBook);
 
 module.exports = route;
